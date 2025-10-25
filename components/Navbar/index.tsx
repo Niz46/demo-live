@@ -24,10 +24,10 @@ export interface NavbarProps {
 export default function Navbar({
   links = [
     { label: "Home", href: "/" },
-    { label: "About us", href: "/about" },
-    { label: "Donations", href: "/donate" },
-    { label: "Campaigns", href: "/campaigns" },
-    { label: "Blogs", href: "/blogs" },
+    { label: "About us", href: "#" },
+    { label: "Donations", href: "#" },
+    { label: "Campaigns", href: "#" },
+    { label: "Blogs", href: "#" },
   ],
   className,
   logoText = "FBHI",
