@@ -24,10 +24,10 @@ export interface NavbarProps {
 export default function Navbar({
   links = [
     { label: "Home", href: "/" },
-    { label: "About us", href: "#" },
-    { label: "Donations", href: "#" },
-    { label: "Campaigns", href: "#" },
-    { label: "Blogs", href: "#" },
+    { label: "About us", href: "/about" },
+    { label: "Donations", href: "/donate" },
+    { label: "Campaigns", href: "/campaigns" },
+    { label: "Blogs", href: "/blog" },
   ],
   className,
   logoText = "FBHI",
@@ -72,7 +72,7 @@ export default function Navbar({
       )}
     >
       <nav
-        className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+        className="max-w-7xl container mx-auto px-4 sm:px-6 lg:px-8"
         role="navigation"
         aria-label="Primary Navigation"
       >
@@ -115,7 +115,8 @@ export default function Navbar({
             <div className="hidden md:flex">
               <Link href="/donate" prefetch={false}>
                 <Button aria-label="Donate now">
-                  {/* Button uses your shadcn button */}Donate Now <ArrowUpRight />
+                  {/* Button uses your shadcn button */}Donate Now{" "}
+                  <ArrowUpRight />
                 </Button>
               </Link>
             </div>
@@ -154,18 +155,7 @@ export default function Navbar({
               onClick={() => setMobileOpen(false)}
             >
               <span className="inline-flex items-center justify-center w-9 h-9 rounded-md bg-emerald-600">
-                <svg
-                  width="18"
-                  height="18"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M12 3C12 3 8 5 6 8C4 11 6 15 12 21C18 15 20 11 18 8C16 5 12 3 12 3Z"
-                    fill="white"
-                  />
-                </svg>
+                <Image src="/logo.png" alt="FBHI Logo" width={28} height={28} />
               </span>
               <span className="font-semibold text-slate-900">{logoText}</span>
             </Link>
